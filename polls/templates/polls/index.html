@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>계절학기 수요조사</h1>
+
+    {% if subject_list %}
+    <ul>
+    {% for subject in subject_list %}
+        <li>
+            <a href="/polls/{{ subject.id }}/">{{ subject.subject_name }}</a><!-- 이부분 url '~~'로 바꾸고싶은데 잘안되네요 -->
+            <!-- 여기에 신청여부?, 현재인원, 총원 -->
+            
+
+        </li>        
+
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+</body>
+</html>
+
