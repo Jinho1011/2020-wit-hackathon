@@ -1,0 +1,30 @@
+.course-title {
+    padding: 36px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.course-info-list {
+    margin-bottom: 32px;
+}
+
+.course-info {
+    padding: 5px 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.course-info-title {
+    font-weight: bold;
+}
+
+a.course-info-content {
+    color: white;
+    background-color: #6E8C6F;
+    padding: 8px 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

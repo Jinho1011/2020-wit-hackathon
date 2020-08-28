@@ -1,0 +1,108 @@
+.course-header {
+    padding: 16px 24px;
+    background-color: #436B44;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.header-subtitle {
+    color: rgba(255, 255, 255, 0.372);
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.input-container input {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 6px 8px 6px;
+    outline: none;
+    border: none;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.372);
+    font-size: 18px;
+}
+
+.select-container {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+
+.select-container select {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+}
+
+.course-submit {
+    width: 100%;
+    background-color: #f0f0f0;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 24px;
+    color: #292929;
+}
+
+.no-result {
+    padding-top: 60px;
+    text-align: center;
+    font-size: 38px;
+    color: #8e8585;
+    font-weight: bold;
+}
+
+.course-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    text-decoration: none;
+    border-bottom: 1px solid #436B44;
+}
+
+.course-item a div {
+    color: black;
+}
+
+.course-start {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.course-center>div {
+    display: flex;
+}
+
+.course-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.course-prof {
+    font-size: 12px;
+}
+
+.course-center-bottom {
+    font-size: 12px;
+}
