@@ -3,10 +3,12 @@ from django.views import View
 from django.http import HttpResponse, HttpRequest
 from django.http import QueryDict
 from urllib import parse
-import course.courseList
+import urllib.parse
+from . import courseList
+from . import courseDetail
 
 
-class CourseView(View):
+class CourseListView(View):
     template_name = 'course/course_index.html'
 
     def get(self, request, *args, **kwargs):
@@ -19,9 +21,22 @@ class CourseView(View):
         sbjtNm = request.POST['sbjtNm']
 
         courseInfo = {
-            openSust, pobtDiv, sbjtId, sbjtNm
+            'openSust': openSust, 'pobtDiv': pobtDiv, 'sbjtId': sbjtId, 'sbjtNm': parse.quote(sbjtNm)
         }
 
+        object_list = courseList.main(courseInfo)
+
         return render(request, self.template_name, {
-            'object_list': courseInfo
+            'object_list': object_list
+        })
+
+
+class CourseDetailView(View):
+    template_name = 'course/course_detail.html'
+
+    def get(self, request, *args, **kwargs):
+        object_list = courseDetail.main(self.kwargs['number'])
+
+        return render(request, self.template_name, {
+            'object_list': object_list
         })

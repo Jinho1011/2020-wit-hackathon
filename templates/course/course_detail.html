@@ -1,0 +1,114 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/course_detail.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <title>All KUlier :: 종합강의시간표</title>
+</head>
+
+<body>
+    <div class="course-title">
+        {{ object_list.courseTitle }}
+    </div>
+    <div class="course-info-list">
+        <div class="course-info">
+            <div class="course-info-title">
+                과목코드
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseCode }}
+            </div>
+        </div>
+
+        <div class="course-info">
+            <div class="course-info-title">
+                교수명
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseProfessor }}
+            </div>
+        </div>
+
+        <div class="course-info">
+            <div class="course-info-title">
+                시간
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseTime }}
+            </div>
+        </div>
+
+        <div class="course-info">
+            <div class="course-info-title">
+                이수구분
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseType }}
+            </div>
+        </div>
+
+        <div class="course-info">
+            <div class="course-info-title">
+                수강대상
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseTarget }}
+            </div>
+        </div>
+
+        <div class="course-info">
+            <div class="course-info-title">
+                강의계획서
+            </div>
+            <a class="course-info-content" href="{{ object_list.courseLink }}">
+                강의계획서
+            </a>
+        </div>
+    </div>
+
+    <div class="course-info-list">
+        <div class="course-info">
+            <div class="course-info-title">
+                1학년
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseRemain1 }}
+            </div>
+        </div>
+
+        <div class="course-info">
+            <div class="course-info-title">
+                2학년
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseRemain2 }}
+            </div>
+        </div>
+
+        <div class="course-info">
+            <div class="course-info-title">
+                3학년
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseRemain3 }}
+            </div>
+        </div>
+
+        <div class="course-info">
+            <div class="course-info-title">
+                4학년
+            </div>
+            <div class="course-info-content">
+                {{ object_list.courseRemain4 }}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
